@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class SpecsProcessor extends Component {
 
   render() {
-    console.log(this.props.processors)
 
     const processors = this.props.processors.map((processor, index) => {
       

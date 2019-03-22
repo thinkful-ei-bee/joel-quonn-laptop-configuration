@@ -4,6 +4,7 @@ import Header from './component/Header/Header';
 import Summary from './component/Summary/Summary';
 import SummaryTotal from './component/SummaryTotal/SummaryTotal';
 import SpecsProcessor from './component/SpecsProcessor/SpecsProcessor';
+import OS from './component/SpecsProcessor/OS';
 
 class App extends Component {
   constructor(props){
@@ -14,7 +15,7 @@ class App extends Component {
             name: '17th Generation Intel Core HB (7 Core with donut spare)',
             cost: 700
           },
-        "Operating System": {
+        OS: {
             name: 'Ubuntu Linux 16.04',
             cost: 200
           },
@@ -76,8 +77,9 @@ class App extends Component {
             <SpecsProcessor 
               processors={this.props.features.Processor}
               selected={this.state.selected.Processor}
-              handleUpdateProcessor={(processor, value) => this.updateFeature(processor, value)} 
+              handleUpdateProcessor={(processor, value) => this.updateFeature(processor, value)}
             />
+            <OS OS={this.props.features.OS} selected={this.state.selected.OS} handleUpdateOS={(OS, value) => this.updateFeature(OS, value)}/>
             {/* { features } */}
           </section>
           <section className="main__summary">

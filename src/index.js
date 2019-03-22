@@ -14,7 +14,7 @@ const FEATURES = {
       cost: 1200
     }
   ],
-  "Operating System": [
+  OS: [
     {
       name: 'Ubuntu Linux 16.04',
       cost: 200
