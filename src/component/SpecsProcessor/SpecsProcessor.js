@@ -16,12 +16,13 @@ export default class SpecsProcessor extends Component {
 
           return (
             <li key={index} className="feature__item">
-              <div className={featureClass}
-                
-                onClick={e => this.props.handleUpdateProcessor('Processor', processor)}>
-                  { processor.name }
-                  ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                    .format(processor.cost) })
+              <div 
+                className={featureClass}
+                onClick={e => this.props.handleUpdateProcessor('Processor', processor)}
+              >
+                { processor.name }
+                ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
+                  .format(processor.cost) })
               </div>
             </li>
           )
