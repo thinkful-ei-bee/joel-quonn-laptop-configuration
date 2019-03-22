@@ -75,7 +75,7 @@ class App extends Component {
             { features }
           </section>
           <section className="main__summary">
-            <h3>NEW GREENLEAF 2018</h3>
+            {/* <h3>NEW GREENLEAF 2018</h3> */}
             {/* {summary} */}
             <Summary selected={this.state.selected} />
             <div className="summary__total">

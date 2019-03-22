@@ -16,6 +16,7 @@ export default class Summary extends Component {
 
     return(
       <>
+        <h3>NEW GREENLEAF 2018</h3>
         {summary}  
       </>
     )
