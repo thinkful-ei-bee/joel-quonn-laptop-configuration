@@ -24,7 +24,7 @@ const FEATURES = {
       cost: 300
     }
   ],
-  "Video Card": [
+  VideoCard: [
     {
       name: 'Toyota Corolla 1.5v',
       cost: 1150.98
