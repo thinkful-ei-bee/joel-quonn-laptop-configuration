@@ -6,7 +6,7 @@ export default class SpecsProcessor extends Component {
 
     const processors = this.props.processors.map((processor, index) => {
       
-      const selectedClass = processor.name === this.props.processors.name ? 'feature__selected' : '';
+      const selectedClass = processor.name === this.props.selected.name ? 'feature__selected' : '';
       const featureClass = 'feature__option ' + selectedClass;
 
       //console.log(selectedClass);

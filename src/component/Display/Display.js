@@ -5,7 +5,7 @@ export default class Display extends Component {
   render() {
 
     const displays = this.props.displays.map((display, index) => {
-      const selectedClass = display.name === this.props.displays.name ? 'feature__selected' : '';
+      const selectedClass = display.name === this.props.selected.name ? 'feature__selected' : '';
       const featureClass = 'feature__option ' + selectedClass;
 
       return (

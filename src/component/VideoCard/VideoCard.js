@@ -5,7 +5,7 @@ export default class VideoCard extends Component {
   render() {
 
     const videoCards = this.props.VC.map((videoCard, index) => {
-      const selectedClass = videoCard.name === this.props.VC.name ? 'feature__selected' : '';
+      const selectedClass = videoCard.name === this.props.selected.name ? 'feature__selected' : '';
       const featureClass = 'feature__option ' + selectedClass;
 
       return (
@@ -24,7 +24,7 @@ export default class VideoCard extends Component {
 
     return (
       <>
-        <div className="feature">OS</div>
+        <div className="feature">Video Card</div>
         <div className="feature__name"></div>
         <ul className="feature__list">
         { videoCards }

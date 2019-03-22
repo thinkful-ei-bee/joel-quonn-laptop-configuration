@@ -9,26 +9,26 @@ import VideoCard from './component/VideoCard/VideoCard';
 import Display from './component/Display/Display';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       selected: {
         Processor: {
-            name: '17th Generation Intel Core HB (7 Core with donut spare)',
-            cost: 700
-          },
+          name: '17th Generation Intel Core HB (7 Core with donut spare)',
+          cost: 700
+        },
         OS: {
-            name: 'Ubuntu Linux 16.04',
-            cost: 200
-          },
-        VideoCard:{
-            name: 'Toyota Corolla 1.5v',
-            cost: 1150.98
-          },
+          name: 'Ubuntu Linux 16.04',
+          cost: 200
+        },
+        VideoCard: {
+          name: 'Toyota Corolla 1.5v',
+          cost: 1150.98
+        },
         Display: {
-            name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
-            cost: 1500
-          }
+          name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
+          cost: 1500
+        }
       }
     }
   }
@@ -44,7 +44,7 @@ class App extends Component {
   render() {
 
     const total = Object.keys(this.state.selected)
-      .reduce((accumulator, feature) => accumulator + this.state.selected[feature].cost, 0);    
+      .reduce((accumulator, feature) => accumulator + this.state.selected[feature].cost, 0);
 
     return (
       <div className="App">
@@ -52,24 +52,24 @@ class App extends Component {
         <main>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-            <Processor 
+            <Processor
               processors={this.props.features.Processor}
               selected={this.state.selected.Processor}
               handleUpdateProcessor={(processor, value) => this.updateFeature(processor, value)}
             />
-            <OS 
-              OS={this.props.features.OS} 
-              selected={this.state.selected.OS} 
+            <OS
+              OS={this.props.features.OS}
+              selected={this.state.selected.OS}
               handleUpdateOS={(OS, value) => this.updateFeature(OS, value)}
             />
-            <VideoCard 
-              VC={this.props.features.VideoCard} 
-              selected={this.state.selected.VideoCard} 
+            <VideoCard
+              VC={this.props.features.VideoCard}
+              selected={this.state.selected.VideoCard}
               handleUpdateVideoCard={(VideoCard, value) => this.updateFeature(VideoCard, value)}
             />
-            <Display 
-              displays={this.props.features.Display} 
-              selected={this.state.selected.Display} 
+            <Display
+              displays={this.props.features.Display}
+              selected={this.state.selected.Display}
               handleUpdateDisplay={(Display, value) => this.updateFeature(Display, value)}
             />
           </section>

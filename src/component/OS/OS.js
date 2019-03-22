@@ -5,7 +5,7 @@ export default class OS extends Component {
   render() {
 
     const oses = this.props.OS.map((os, index) => {
-      const selectedClass = os.name === this.props.OS.name ? 'feature__selected' : '';
+      const selectedClass = os.name === this.props.selected.name ? 'feature__selected' : '';
       const featureClass = 'feature__option ' + selectedClass;
 
       return (
