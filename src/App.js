@@ -3,7 +3,7 @@ import './App.css';
 import Header from './component/Header/Header';
 import Summary from './component/Summary/Summary';
 import SummaryTotal from './component/SummaryTotal/SummaryTotal';
-import SpecsProcessor from './component/SpecsProcessor/SpecsProcessor';
+import Processor from './component/Processor/Processor';
 import OS from './component/OS/OS';
 import VideoCard from './component/VideoCard/VideoCard';
 import Display from './component/Display/Display';
@@ -52,7 +52,7 @@ class App extends Component {
         <main>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-            <SpecsProcessor 
+            <Processor 
               processors={this.props.features.Processor}
               selected={this.state.selected.Processor}
               handleUpdateProcessor={(processor, value) => this.updateFeature(processor, value)}
