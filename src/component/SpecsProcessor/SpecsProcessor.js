@@ -18,7 +18,7 @@ export default class SpecsProcessor extends Component {
             <li key={index} className="feature__item">
               <div className={featureClass}
                 
-                onClick={e => this.props.handleUpdateProcessor(key, processor)}>
+                onClick={e => this.props.handleUpdateProcessor('Processor', processor)}>
                   { processor.name }
                   ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
                     .format(processor.cost) })

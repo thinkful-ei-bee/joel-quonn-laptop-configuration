@@ -41,7 +41,7 @@ class App extends Component {
   render() {
 
     const total = Object.keys(this.state.selected)
-      .reduce((acc, curr) => acc + this.state.selected[curr].cost, 0);    
+      .reduce((accumulator, currentValue) => accumulator + this.state.selected[currentValue].cost, 0);    
 
     const features = Object.keys(this.props.features)
       .map(key => {
@@ -75,6 +75,7 @@ class App extends Component {
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             <SpecsProcessor 
               processors={this.props.features.Processor}
+              selected={this.state.selected.Processor}
               handleUpdateProcessor={processor=>this.updateFeature(processor)} 
             />
             {/* { features } */}
