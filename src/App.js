@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './component/Header/Header';
+import Summary from './component/Summary/Summary';
 
 class App extends Component {
   constructor(props){
@@ -84,7 +85,8 @@ class App extends Component {
           </section>
           <section className="main__summary">
             <h3>NEW GREENLEAF 2018</h3>
-            {summary}
+            {/* {summary} */}
+            <Summary selected={this.state.selected} />
             <div className="summary__total">
               <div className="summary__total__label">Your Price: </div>
               <div className="summary__total__value">
