@@ -18,7 +18,7 @@ export default class SpecsProcessor extends Component {
             <li key={index} className="feature__item">
               <div 
                 className={featureClass}
-                onClick={e => this.props.handleUpdateProcessor('Processor', processor)}
+                onClick={e => this.props.handleUpdateProcessor(key, processor)}
               >
                 { processor.name }
                 ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
@@ -30,10 +30,9 @@ export default class SpecsProcessor extends Component {
 
         return (
           <>
-            <div className="feature__name">{key}</div>
-            <ul className="feature__list">
+            
               { processors }
-            </ul>
+           
           </>
         )
 
@@ -44,7 +43,10 @@ export default class SpecsProcessor extends Component {
     return (
       <>
         <div className="feature">Processor</div>
+        <div className="feature__name"></div>
+        <ul className="feature__list">
         { features }
+        </ul>
       </>
     )
   }
