@@ -28,12 +28,14 @@ export default class SpecsProcessor extends Component {
           )
         });
 
-        return <div className="feature" key={key}>
-        <div className="feature__name">{key}</div>
-          <ul className="feature__list">
-            { processors }
-          </ul>
-        </div>
+        return (
+          <>
+            <div className="feature__name">{key}</div>
+            <ul className="feature__list">
+              { processors }
+            </ul>
+          </>
+        )
 
       });
     
@@ -41,6 +43,7 @@ export default class SpecsProcessor extends Component {
 
     return (
       <>
+        <div className="feature">Processor</div>
         { features }
       </>
     )
