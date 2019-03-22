@@ -41,7 +41,7 @@ class App extends Component {
   render() {
 
     const total = Object.keys(this.state.selected)
-      .reduce((accumulator, currentValue) => accumulator + this.state.selected[currentValue].cost, 0);    
+      .reduce((accumulator, feature) => accumulator + this.state.selected[feature].cost, 0);    
 
     const features = Object.keys(this.props.features)
       .map(key => {
