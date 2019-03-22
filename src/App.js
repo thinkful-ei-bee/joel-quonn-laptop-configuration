@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './component/Header/Header';
 import Summary from './component/Summary/Summary';
+import SummaryTotal from './component/SummaryTotal/SummaryTotal';
 
 class App extends Component {
   constructor(props){
@@ -78,13 +79,7 @@ class App extends Component {
             {/* <h3>NEW GREENLEAF 2018</h3> */}
             {/* {summary} */}
             <Summary selected={this.state.selected} />
-            <div className="summary__total">
-              <div className="summary__total__label">Your Price: </div>
-              <div className="summary__total__value">
-              { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                  .format(total) }
-              </div>
-            </div>
+            <SummaryTotal total={total} />
           </section>
         </main>
       </div>
